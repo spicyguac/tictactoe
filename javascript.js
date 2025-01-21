@@ -1,13 +1,28 @@
 
-function newBoard(){
+function newGame(){
     let board = [
         [null, null, null],
         [null, null, null],
         [null, null, null]
     ];
 
-    const addX = (x,y) => board[x][y] = "X";
-    const addO = (x,y) => board[x][y] = "O";
+    function addX(x,y){
+        if(board[x][y] == null){
+            board[x][y] = "X";
+            return 1;
+        }else{
+            return 0;
+        }
+    }
+
+    function addO(x,y){
+        if(board[x][y] == null){
+            board[x][y] = "O";
+            return 1;
+        }else{
+            return 0;
+        }
+    }
 
     function hasWon(){
         let xWin = 0;
@@ -85,9 +100,8 @@ function newBoard(){
     };
 }
 
-function gameLogic(gameBoard){
-    console.log(gameBoard)
-    let board = gameBoard
+function baordVisuals(){
+    
 
 
 }
@@ -108,6 +122,3 @@ function playGame(){
 }
 
 const new1 = newBoard();
-
-
-console.log(new1.board);
